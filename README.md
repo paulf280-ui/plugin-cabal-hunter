@@ -6,7 +6,7 @@
 [![Install MCP in Cursor](https://img.shields.io/badge/Cursor-Install_Cabal--Hunter_MCP-111111?style=for-the-badge)](https://cursor.com/install-mcp?name=cabal-hunter&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuY2FiYWwtaHVudGVyLmNvbS9tY3AifQ==)
 [![Free tier](https://img.shields.io/badge/100%2Fmo_free-then_%240.01_at_cost-10b981?style=for-the-badge)](https://api.cabal-hunter.com/api/info)
 
-Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 100 free scans/month per IP, **no signup, no API key**. Then $0.01 USDC per scan via x402 on Solana (priced at cost — it covers the Helius RPC calls behind each live trace).
+Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 100 free scans/month per IP, **no signup, no API key**. Then $0.01 USDC per scan, priced at cost (it covers the Helius RPC behind each live trace). Two ways to pay, no card: a **prepaid key** (one USDC payment, reusable — $5=550 scans, $10=1,200, **$25=Unlimited** fair-use) via `POST /api/buy-key` + `X-API-Key` header, or per-call via x402. [Full pricing →](https://api.cabal-hunter.com/pricing)
 
 ## ElizaOS quick start
 
