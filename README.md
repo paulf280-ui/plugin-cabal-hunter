@@ -4,9 +4,9 @@
 
 [![Install MCP in VS Code](https://img.shields.io/badge/VS_Code-Install_Cabal--Hunter_MCP-0098FF?style=for-the-badge&logo=githubcopilot&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=cabal-hunter&config=%7B%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A%2F%2Fapi.cabal-hunter.com%2Fmcp%22%7D)
 [![Install MCP in Cursor](https://img.shields.io/badge/Cursor-Install_Cabal--Hunter_MCP-111111?style=for-the-badge)](https://cursor.com/install-mcp?name=cabal-hunter&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuY2FiYWwtaHVudGVyLmNvbS9tY3AifQ==)
-[![Free tier](https://img.shields.io/badge/100%2Fmo_free-then_%240.01_at_cost-10b981?style=for-the-badge)](https://api.cabal-hunter.com/api/info)
+[![Free tier](https://img.shields.io/badge/250%2Fmo_free-then_%240.001_at_cost-10b981?style=for-the-badge)](https://api.cabal-hunter.com/api/info)
 
-Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 100 free scans/month per IP, **no signup, no API key**. Then $0.01 USDC per scan, priced at cost (it covers the Helius RPC behind each live trace). Two ways to pay, no card: a **prepaid key** (one USDC payment, reusable — $5=550 scans, $10=1,200, **$25=Unlimited** fair-use) via `POST /api/buy-key` + `X-API-Key` header, or per-call via x402. [Full pricing →](https://api.cabal-hunter.com/pricing)
+Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 250 free scans/month per IP, **no signup, no API key**. Then **$9/month for Unlimited** (fair use), or pay-as-you-go at $0.001 USDC per scan — priced at cost. Prepaid via `POST /api/buy-key` + `X-API-Key` header, or per-call via x402. [Full pricing →](https://api.cabal-hunter.com/pricing)
 
 ## ElizaOS quick start
 
