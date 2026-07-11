@@ -6,6 +6,8 @@
 [![Install MCP in Cursor](https://img.shields.io/badge/Cursor-Install_Cabal--Hunter_MCP-111111?style=for-the-badge)](https://cursor.com/install-mcp?name=cabal-hunter&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuY2FiYWwtaHVudGVyLmNvbS9tY3AifQ==)
 [![Free tier](https://img.shields.io/badge/250%2Fmo_free-then_%240.001_at_cost-10b981?style=for-the-badge)](https://api.cabal-hunter.com/api/info)
 
+> 🌐 **Available in 9 languages:** [English](https://api.cabal-hunter.com/) · [Español](https://api.cabal-hunter.com/es) · [Português](https://api.cabal-hunter.com/pt) · [Français](https://api.cabal-hunter.com/fr) · [Deutsch](https://api.cabal-hunter.com/de) · [Nederlands](https://api.cabal-hunter.com/nl) · [中文](https://api.cabal-hunter.com/zh) · [日本語](https://api.cabal-hunter.com/ja) · [한국어](https://api.cabal-hunter.com/ko)
+
 Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 250 free scans/month per IP, **no signup, no API key**. Then **$9/month for Unlimited** (fair use), or pay-as-you-go at $0.001 USDC per scan — priced at cost. Prepaid via `POST /api/buy-key` + `X-API-Key` header, or per-call via x402. [Full pricing →](https://api.cabal-hunter.com/pricing)
 
 ## ElizaOS quick start
