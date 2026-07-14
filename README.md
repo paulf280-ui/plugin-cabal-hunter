@@ -1,6 +1,8 @@
 # elizaos-plugin-cabal-hunter
 
-**Solana rug & cabal detection for ElizaOS trading agents.** One action — `CHECK_CABAL_RISK` — scans any Solana mint *before your agent buys*: funding-trace cabal detection, same-block Jito bundles, live coordinated dumps, serial-rug deployer history ("launched 14, 13 dead"), a Solana-native honeypot check (freeze authority + Token-2022 traps) and an exit-liquidity verdict. **Every flag links to its on-chain evidence transaction.**
+**Solana rug & cabal detection for ElizaOS trading agents.** `CHECK_CABAL_RISK` scans any Solana mint *before your agent buys*: funding-trace cabal detection, same-block Jito bundles, live coordinated dumps, serial-rug deployer history ("launched 14, 13 dead"), a Solana-native honeypot check (freeze authority + Token-2022 traps) and an exit-liquidity verdict. **Every flag links to its on-chain evidence transaction.**
+
+Cabal-Hunter also exposes a **pre-launch funding trace** (`trace_funding` via [MCP](https://api.cabal-hunter.com/mcp) or `GET /api/funding-trace`): it walks the token's *first* buyers back to the wallet that funded them, and flags when the **deployer funded the wallets that sniped their own launch**. Because it looks at who bought *at launch* rather than who holds *now*, it still catches a coordinated group **after they've already sold** — when a current-holder view would show you nothing.
 
 [![Install MCP in VS Code](https://img.shields.io/badge/VS_Code-Install_Cabal--Hunter_MCP-0098FF?style=for-the-badge&logo=githubcopilot&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=cabal-hunter&config=%7B%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A%2F%2Fapi.cabal-hunter.com%2Fmcp%22%7D)
 [![Install MCP in Cursor](https://img.shields.io/badge/Cursor-Install_Cabal--Hunter_MCP-111111?style=for-the-badge)](https://cursor.com/install-mcp?name=cabal-hunter&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuY2FiYWwtaHVudGVyLmNvbS9tY3AifQ==)
