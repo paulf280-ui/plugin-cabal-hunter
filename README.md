@@ -1,6 +1,6 @@
 # elizaos-plugin-cabal-hunter
 
-**Solana rug & cabal detection for ElizaOS trading agents.** `CHECK_CABAL_RISK` scans any Solana mint *before your agent buys*: funding-trace cabal detection, same-block Jito bundles, live coordinated dumps, serial-rug deployer history ("launched 14, 13 dead"), a Solana-native honeypot check (freeze authority + Token-2022 traps) and an exit-liquidity verdict. **Every flag links to its on-chain evidence transaction.**
+**Solana rug & cabal detection for ElizaOS trading agents.** `CHECK_CABAL_RISK` scans any Solana mint *before your agent buys*: funding-trace cabal detection, same-block Jito bundles, live coordinated dumps, serial-launcher deployer history ("launched 14, 13 dead"), a Solana-native honeypot check (freeze authority + Token-2022 traps) and an exit-liquidity verdict. **Every flag links to its on-chain evidence transaction.**
 
 [![Install MCP in VS Code](https://img.shields.io/badge/VS_Code-Install_Cabal--Hunter_MCP-0098FF?style=for-the-badge&logo=githubcopilot&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=cabal-hunter&config=%7B%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A%2F%2Fapi.cabal-hunter.com%2Fmcp%22%7D)
 [![Install MCP in Cursor](https://img.shields.io/badge/Cursor-Install_Cabal--Hunter_MCP-111111?style=for-the-badge)](https://cursor.com/install-mcp?name=cabal-hunter&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuY2FiYWwtaHVudGVyLmNvbS9tY3AifQ==)
@@ -46,7 +46,7 @@ console.log(report.recommendation, report.cabal_score, report.top_reasons);
   "cabal_score": 100,               // 0-100
   "honeypot_risk": "LOW",           // freeze authority + Token-2022 traps
   "exit_liquidity_risk": true,      // can the pool absorb your exit?
-  "deployer": { "verdict": "SERIAL_RUGGER", "tokens_launched": 14, "dead": 13 },
+  "deployer": { "verdict": "SERIAL_LAUNCHER", "tokens_launched": 14, "dead": 13 },
   "clusters": [{ "wallets": 5, "combined_pct": 23.1, "evidence_tx": "https://solscan.io/tx/…" }],
   "scan_complete": true,            // how much did we even look at —
   "wallets_checked": 15             // apply YOUR risk tolerance, not ours
