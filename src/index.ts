@@ -62,7 +62,7 @@ function summarize(r: CabalScanResult): string {
   const dep = r.deployer;
   if (dep?.verdict) lines.push(`deployer: ${dep.verdict}${dep.tokens_launched ? ` (${dep.dead}/${dep.tokens_launched} past launches dead)` : ""}`);
   for (const reason of r.top_reasons ?? []) lines.push(`- ${reason}`);
-  lines.push(`evidence + bubble map: ${API_BASE}/map?mint=${r.mint ?? ""}`);
+  lines.push(`evidence + holder map: ${API_BASE}/map?mint=${r.mint ?? ""}`);
   return lines.join("\n");
 }
 

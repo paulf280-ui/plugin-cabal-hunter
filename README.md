@@ -12,6 +12,9 @@ Powered by [Cabal-Hunter](https://api.cabal-hunter.com) — 250 free scans/month
 
 ## ElizaOS quick start
 
+![Cabal-Hunter — interactive 3D holder map: crystals sized by supply share, clusters joined by beams, with deployer history and an Exit-Liquidity Risk verdict](demo/screenshot.png)
+
+
 ```bash
 npm install elizaos-plugin-cabal-hunter
 ```
@@ -59,7 +62,7 @@ console.log(report.recommendation, report.cabal_score, report.top_reasons);
 
 - **MCP (Claude Code / Claude Desktop / Cursor / VS Code):** `{"mcpServers": {"cabal-hunter": {"url": "https://api.cabal-hunter.com/mcp"}}}` — or the one-click buttons above.
 - **REST:** `curl "https://api.cabal-hunter.com/api/scan-cabal?mintAddress=<MINT>"` — [OpenAPI spec](https://api.cabal-hunter.com/openapi.json)
-- **Human?** Free interactive bubble map: [api.cabal-hunter.com/map](https://api.cabal-hunter.com/map) — wallet addresses, Solscan receipts, live chart + trade links (Axiom · GMGN · DexScreener) on one screen.
+- **Human?** Free interactive 3D holder map: [api.cabal-hunter.com/map](https://api.cabal-hunter.com/map) — holders as crystals sized by supply share, clusters joined by beams, plus wallet addresses, Solscan receipts, live chart + trade links (Axiom · GMGN · DexScreener) on one screen.
 
 ## Cabal-Hunter everywhere
 
@@ -67,7 +70,7 @@ Same detection engine, wherever your stack lives:
 
 - **`npx cabal-hunter-mcp`** — standalone MCP server for Claude · Cursor · VS Code · any MCP client: [cabal-hunter-mcp](https://github.com/paulf280-ui/cabal-hunter-mcp) · [npm](https://www.npmjs.com/package/cabal-hunter-mcp)
 - **MCP template / starter:** [solana-safe-sniper-mcp-template](https://github.com/paulf280-ui/solana-safe-sniper-mcp-template)
-- **REST API + OpenAPI · free bubble map:** [api.cabal-hunter.com](https://api.cabal-hunter.com) · [/map](https://api.cabal-hunter.com/map)
+- **REST API + OpenAPI · free 3D holder map:** [api.cabal-hunter.com](https://api.cabal-hunter.com) · [/map](https://api.cabal-hunter.com/map)
 
 ## License
 
