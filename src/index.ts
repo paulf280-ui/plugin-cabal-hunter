@@ -8,8 +8,8 @@
  * authority + Token-2022 traps) and an exit-liquidity verdict. Every flag links
  * to its on-chain evidence transaction.
  *
- * 100 free queries/month per IP (no signup, no key). Then $0.01 USDC per query
- * via x402 on Solana — priced at cost.
+ * 250 free scans/month per IP (no signup, no key). Then $9/month for Unlimited
+ * (fair use), or $0.001 USDC per scan via x402 on Solana — priced at cost.
  */
 
 const API_BASE = process.env.CABAL_HUNTER_API ?? "https://api.cabal-hunter.com";
@@ -109,8 +109,12 @@ export const checkCabalRiskAction = {
 export const cabalHunterPlugin = {
   name: "cabal-hunter",
   description:
-    "Solana token cabal/rug detection for trading agents — funding traces, bundle detection, deployer " +
-    "history, honeypot + exit-liquidity checks via api.cabal-hunter.com. 100 free scans/month, no key.",
+    // Ordered by strength of evidence: the dev track record is the layer we can
+    // most solidly demonstrate, so it leads. The pre-launch funding tracer was
+    // withdrawn after measurement and is deliberately not listed.
+    "Solana token cabal/rug detection for trading agents — dev track record (peak market cap of every "  +
+    "past launch), holder concentration, same-block bundles, coordinated dumps, honeypot + exit-liquidity " +
+    "checks via api.cabal-hunter.com. 250 free scans/month, no key.",
   actions: [checkCabalRiskAction],
 };
 
