@@ -1,6 +1,6 @@
 {
   "name": "elizaos-plugin-cabal-hunter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Solana token cabal/rug detection for ElizaOS trading agents — dev track record (peak market cap of every past launch), holder concentration, Jito bundle + coordinated-dump flags, honeypot & exit-liquidity checks. 250 free scans/month, no API key.",
   "type": "module",
   "main": "dist/index.js",
