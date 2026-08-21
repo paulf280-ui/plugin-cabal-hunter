@@ -1,7 +1,7 @@
 {
   "name": "elizaos-plugin-cabal-hunter",
      "version": "0.2.1",
-    "description": "MCP server for Cabal-Hunter \u2014 Solana token rug & cabal detection for AI agents. Wallet clusters, same-block bundles, deployer track record with peak market caps, honeypot and authority traps. 5 free scans/month, or 250 with a free key. Card, USDC or x402.",
+     "description": "Solana token cabal/rug detection for ElizaOS trading agents \u2014 dev track record (peak market cap of every past launch), holder concentration, Jito bundle + coordinated-dump flags, honeypot & exit-liquidity checks. 5 free scans/month, or 250 with a free key. Card, USDC or x402.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
