@@ -3,13 +3,15 @@
  *
  * Gives any ElizaOS agent the CHECK_CABAL_RISK action: before your agent buys a
  * Solana token, it scans the mint with Cabal-Hunter (api.cabal-hunter.com) —
- * funding-trace cabal detection, same-block Jito bundles, live coordinated
- * dumps, serial-rug deployer history, Solana-native honeypot check (freeze
- * authority + Token-2022 traps) and an exit-liquidity verdict. Every flag links
- * to its on-chain evidence transaction.
+ * funding-trace cabal detection (one hop, to a shared funding wallet),
+ * same-block Jito bundles, same-block coordinated selling, serial-launcher
+ * deployer history, Solana-native honeypot check (freeze authority +
+ * Token-2022 traps) and an exit-liquidity verdict. Every wallet cluster carries
+ * evidence_txs[] — the signatures behind that cluster.
  *
- * 250 free scans/month per IP (no signup, no key). Then $9/month for Unlimited
- * (fair use), or $0.001 USDC per scan via x402 on Solana — priced at cost.
+ * 5 free scans/month with no key; 250/month with a free key (one email). Then
+ * $9/month for Unlimited (fair use), or $0.001 USDC per scan via x402 on
+ * Solana — priced at cost.
  */
 
 const API_BASE = process.env.CABAL_HUNTER_API ?? "https://api.cabal-hunter.com";
@@ -70,10 +72,12 @@ export const checkCabalRiskAction = {
   name: "CHECK_CABAL_RISK",
   similes: ["SCAN_TOKEN", "RUG_CHECK", "CABAL_SCAN", "TOKEN_SAFETY_CHECK"],
   description:
-    "Scan a Solana token mint for coordinated cabals, same-block bundles, live coordinated dumps, " +
-    "serial-rug deployers, honeypot mechanics (freeze authority / Token-2022 traps) and exit-liquidity " +
-    "risk BEFORE buying. Use when a message contains a Solana mint address and the user (or the agent's " +
-    "own trading logic) wants to know if the token is safe.",
+    "Scan a Solana token mint for coordinated cabals, same-block bundles, same-block coordinated " +
+    "selling, serial-launcher deployers, honeypot mechanics (freeze authority / Token-2022 traps) and " +
+    "exit-liquidity risk BEFORE buying. cabal_score and risk cover coordination only — read " +
+    "honeypot_risk and risk_level too, and never treat degraded:true as an all-clear. Use when a " +
+    "message contains a Solana mint address and the user (or the agent's own trading logic) wants to " +
+    "know if the token is safe.",
   validate: async (_runtime: unknown, message: any): Promise<boolean> => {
     const text: string = message?.content?.text ?? "";
     return MINT_RE.test(text);
@@ -113,8 +117,8 @@ export const cabalHunterPlugin = {
     // most solidly demonstrate, so it leads. The pre-launch funding tracer was
     // withdrawn after measurement and is deliberately not listed.
     "Solana token cabal/rug detection for trading agents — dev track record (peak market cap of every "  +
-    "past launch), holder concentration, same-block bundles, coordinated dumps, honeypot + exit-liquidity " +
-    "checks via api.cabal-hunter.com. 250 free scans/month, no key.",
+    "past launch), holder concentration, same-block bundles, same-block coordinated selling, honeypot + " +
+    "exit-liquidity checks via api.cabal-hunter.com. 5 free scans/month with no key, 250 with a free key.",
   actions: [checkCabalRiskAction],
 };
 
